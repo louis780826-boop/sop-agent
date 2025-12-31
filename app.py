@@ -11,7 +11,7 @@ def check_password():
     """檢查用戶密碼是否正確"""
     # 如果 secrets 裡沒設定密碼，就預設不鎖（方便測試）
     if "APP_PASSWORD" not in st.secrets:
-        return True
+        return False
     
     # 讀取側邊欄輸入的密碼
     password_input = st.sidebar.text_input("🔑 請輸入通行密碼 (付費解鎖)", type="password")

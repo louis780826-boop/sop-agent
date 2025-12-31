@@ -9,16 +9,28 @@ st.set_page_config(page_title="智能 SOP 生成器 Pro", page_icon="📝", layo
 # --- 2. 門禁系統 (新增功能) ---
 def check_password():
     """檢查用戶密碼是否正確"""
-    # 如果 secrets 裡沒設定密碼，就預設不鎖（方便測試）
     if "APP_PASSWORD" not in st.secrets:
-        return False
+        # 如果忘了設密碼，預設不鎖，但會提示
+        return True
     
-    # 讀取側邊欄輸入的密碼
     password_input = st.sidebar.text_input("🔑 請輸入通行密碼 (付費解鎖)", type="password")
     
     if password_input == st.secrets["APP_PASSWORD"]:
         return True
     else:
+        # 👇 這裡填入您的 Gumroad 連結
+        gumroad_link = "https://louisian5723.gumroad.com/l/wjxao" 
+        
+        st.sidebar.markdown(f"---")
+        st.sidebar.warning("🔒 未輸入密碼或密碼錯誤")
+        st.sidebar.markdown(f"""
+        ### 如何獲取密碼？
+        本工具為 VIP 專用功能。
+        
+        👉 **[點擊這裡購買通行證 (US$ 9)]({gumroad_link})**
+        
+        *付款後，系統會自動將密碼寄至您的信箱。*
+        """)
         return False
 
 # --- 3. 讀取 API Key ---

@@ -4,8 +4,8 @@ from docx import Document
 from io import BytesIO
 
 # --- 0. 全局設定 (請在此修改您的商品資訊) ---
-PAGE_TITLE = "企業級 SOP 智能生成器 (VIP版)"
-GUMROAD_LINK = "https://gumroad.com/l/xxxxx"  # 👈 請記得換成您真的 Gumroad 商品連結
+PAGE_TITLE = "企業級 SOP 智能生成器 "
+GUMROAD_LINK = "https://louisian5723.gumroad.com/l/wjxao"  # 👈 請記得換成您真的 Gumroad 商品連結
 MAX_USAGE_PER_SESSION = 10  # 限制每次登入只能生成幾次 (防止惡意刷單)
 
 # --- 1. 頁面初始化 ---
@@ -37,7 +37,7 @@ def check_password():
         ### 尚未擁有密碼？
         本工具為付費軟體，提供企業級 SOP 生成服務。
         
-        👉 **[點擊購買 VIP 通行證 (US$ 9)]({GUMROAD_LINK})**
+        👉 **[點擊購買 VIP 通行證 (US$ 5)]({GUMROAD_LINK})**
         
         *付款後，系統將自動發送密碼至您的信箱。*
         """)
@@ -163,3 +163,4 @@ with col2:
         )
     else:
         st.info("👈 在左側輸入內容並點擊生成，結果將顯示於此。")
+

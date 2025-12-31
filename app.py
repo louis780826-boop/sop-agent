@@ -27,7 +27,7 @@ def check_password():
         ### 如何獲取密碼？
         本工具為 VIP 專用功能。
         
-        👉 **[點擊這裡購買通行證 (US$ 9)]({gumroad_link})**
+        👉 **[點擊這裡購買通行證 (US$ 5)]({gumroad_link})**
         
         *付款後，系統會自動將密碼寄至您的信箱。*
         """)
@@ -117,4 +117,5 @@ with col2:
             file_name="SOP_Output.docx",
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             type="primary"
+
         )
